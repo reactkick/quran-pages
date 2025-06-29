@@ -1,0 +1,68 @@
+/* Google'dan Amiri fontunu yüklüyoruz. Bu font, Kur'an metni için çok uygun ve okunaklıdır. */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+
+/* --- Genel Sayfa Ayarları --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fdf6e3; /* Sayfa arkası için yumuşak bir krem rengi */
+    color: #333; /* Genel metin rengi */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- Ana İçerik Konteyneri --- */
+#kuran-icerik {
+    max-width: 900px; /* İçeriğin çok genişleyip okunmasını zorlaştırmaması için */
+    margin: 0 auto; /* Sayfayı ortalamak için */
+}
+
+/* --- Başlık (Kur'an-ı Kerim) --- */
+h1 {
+    text-align: center;
+    color: #8B4513; /* Sade bir kahverengi */
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+/* --- Her bir Kur'an Sayfası için Stil --- */
+.sayfa {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Yumuşak köşeler */
+    padding: 25px 35px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Hafif bir gölge */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Sayfanın üzerine gelindiğinde hafifçe yükselmesi efekti */
+.sayfa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Sayfa Numarası Başlığı (H2) --- */
+.sayfa h2 {
+    text-align: left; /* Sayfa numarası solda kalacak */
+    direction: ltr; /* Yazı yönü soldan sağa */
+    color: #999;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee; /* İnce bir ayırıcı çizgi */
+}
+
+/* --- Kur'an Metni Paragrafı (p) --- */
+.sayfa p {
+    font-family: 'Amiri', serif; /* Arapça metin için özel font */
+    direction: rtl; /* ÖNEMLİ: Yazı yönünü sağdan sola ayarlar */
+    text-align: right; /* ÖNEMLİ: Metni sağa yaslar */
+    font-size: 1.8rem; /* Arapça metnin rahat okunması için büyük font boyutu */
+    line-height: 2.5; /* Satırlar arası boşluk, okunabilirliği artırır */
+    color: #2c2c2c;
+    margin-bottom: 0;
+}
