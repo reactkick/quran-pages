@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kur'an-ı Kerim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kur'an-ı Kerim</h1>
+    <div id="kuran-icerik">
+        <!-- Kur'an sayfaları buraya JavaScript ile eklenecek -->
+    </div>
+
+    <!-- Önce Kuran verisini, sonra o veriyi kullanacak kodu ekliyoruz -->
+    <script src="kuran.js"></script>
+    <script>
+        // Sayfa yüklendiğinde çalışacak kod
+        document.addEventListener('DOMContentLoaded', () => {
+            const icerikDiv = document.getElementById('kuran-icerik');
+            
+            // quranData dizisindeki her bir sayfa için HTML oluştur
+            quranData.forEach(sayfa => {
+                const sayfaDiv = document.createElement('div');
+                sayfaDiv.className = 'sayfa';
+
+                const baslik = document.createElement('h2');
+                baslik.textContent = `Sayfa ${sayfa.page}`;
+
+                const metin = document.createElement('p');
+                metin.textContent = sayfa.text;
+
+                sayfaDiv.appendChild(baslik);
+                sayfaDiv.appendChild(metin);
+                icerikDiv.appendChild(sayfaDiv);
+            });
+        });
+    </script>
+</body>
+</html>
